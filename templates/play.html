@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+		<link href="/static/styles.css" rel="stylesheet">
+		<script>
+			const data = {{ data|tojson }};
+		</script>
+		<script src="/static/scripts/jquery.js"></script>
+		<script type="module" src="/static/scripts/play.js"></script>
+		<title>{{ data["quiz"][1] }}</title>
+	</head>
+	<body>
+		<div class="jumbotron">
+			<h1>{{ data["quiz"][1] }}</h1>
+			<p>{{ data["quiz"][2] }}</p>
+		</div>
+		<div id="qparent" class="container"></div>
+		<div class="container">
+			<button id="check">Check</button>
+			<div class="section" id="result" hidden>
+				<h1></h1>
+				<h2></h2>
+				<h3></h3>
+			</div>
+		</div>
+	</body>
+</html>

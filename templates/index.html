@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Quizzes</title>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Quizzes</h1>
+            <h2><a href="/create">Create</a> a quiz or play others' quizzes below!</h2>
+            turn on subtitles btw
+        </div>
+        <div class="container">
+            <h2>Browse quizzes</h2>
+            {% for quiz in quizzes %}
+                <a href={{ url_for("play", quizid=quiz[0]) }}>
+                    <div class="section" style="border: 1px solid #444">
+                        <h3>{{ quiz[1] }}</h3>
+                        <p>{{ quiz[2] }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </body>
+</html>

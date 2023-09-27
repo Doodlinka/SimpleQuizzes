@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <script src="/static/scripts/jquery.js"></script>
+        <script type="module" src="/static/scripts/create.js"></script>
+
+        <title>Create a quiz</title>
+    </head>
+    <body>
+        <div class="jumbotron">
+            <h1>Create a quiz</h1>
+        </div>
+        <div class="container">
+            <fieldset id="wparent" class="section">
+                <br><input autocomplete="off" autofocus id="quizname" placeholder="Quiz name" type="text">
+                <br><textarea autocomplete="off" id="quizdesc" placeholder="Quiz description" type="text" rows="5" cols="50"></textarea>
+                <br><label><input type="checkbox" autocomplete="off" id="hascorrect">Has correct answers</label>
+                <input id="addwinner" type="button" value="Add a winner">
+            </fieldset>
+
+            <h2>Questions</h2>
+            <div id="qparent"></div>
+            <input id="addquestion" type="button" value="Add a question"><br>
+
+            <br><button id="submit">Submit</button>
+        </div>
+    </body>
+</html>
